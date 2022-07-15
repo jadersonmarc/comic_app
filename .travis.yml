@@ -1,4 +1,6 @@
 language: ruby
+rvm:
+  - 2.7
 cache:
   - bundler
   - yarn
@@ -13,4 +15,3 @@ before_script:
 #  - bundle exec rake db:schema:load
 script:
   - bundle exec rake test
-  - bundle exec rake test:system
