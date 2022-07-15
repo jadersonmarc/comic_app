@@ -57,6 +57,7 @@ group :development, :test do
 end
 group :test do
   gem 'shoulda-matchers', '~> 4.0'
+  gem 'rspec-core', '~> 3.4', '>= 3.4.4'
 end
 
 group :development do
@@ -78,6 +79,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'rake'
+  gem 'simplecov', require: false
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
