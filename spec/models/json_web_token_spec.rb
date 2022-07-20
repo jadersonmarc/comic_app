@@ -16,6 +16,7 @@ RSpec.describe JsonWebToken, type: :model do
     before do
       payload['exp'] = 0
     end
+
     it 'expired token' do
       jwt = JsonWebToken.encode(payload)
       expect { JsonWebToken.decode(jwt) }.to raise_error(JWT::ExpiredSignature)

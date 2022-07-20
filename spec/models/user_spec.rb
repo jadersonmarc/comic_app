@@ -6,11 +6,6 @@ RSpec.describe User, type: :model do
   it { expect(user).to respond_to(:password_confirmation) }
   it { expect(user).to respond_to(:password) }
 
-  context 'when name is blank' do
-    before { user.name = " " }
-    it { expect(user).to validate_presence_of(:name)}
-  end
-
   context 'when email is blank' do
     before { user.email = " " }
     it { expect(user).to validate_presence_of(:email)}
